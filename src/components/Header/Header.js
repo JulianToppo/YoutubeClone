@@ -2,9 +2,9 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <div className='flex absolute w-full justify-between shadow-md bg-white z-10'>
+    <div className='flex relative w-full justify-between shadow-md bg-white z-10'>
         <div className='flex'>
-          <p>hello</p>
+          
             <img className='h-10 mt-2' src='https://cdn4.iconfinder.com/data/icons/action-states-vol-3-glyph/48/Sed-10-512.png'></img>
             <img className='h-16 -mt-1' src='https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg' alt='youtubelogo'></img>
         </div>
