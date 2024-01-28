@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import youtubeSlice from "./youtubeSlice";
+import appSlice from "./appSlice";
 
-const store=configureStore({
+const store=configureStore(
     {
         reducer:{
-            youtube:youtubeSlice
+            youtube:youtubeSlice,
+            appSlice:appSlice,
         }
     }
-});
+);
 
 export default store;

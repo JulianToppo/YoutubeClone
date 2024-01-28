@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { categories, listofvideos } from '../../utils/youtubeConstants'
+import { categories } from '../../utils/youtubeConstants'
 
 const VideoGenreButtons = () => {
     const [videoArray,setVideoArray]= useState([]);
@@ -19,7 +19,7 @@ const VideoGenreButtons = () => {
     <div className='p-3 rounded-xl relative overflow-x-auto whitespace-nowrap'>
     <div className='flex space-x-5'>
       {videoArray.length && videoArray.map((items) => (
-        <button key={items.id} className='px-2 py-3 rounded-lg bg-slate-500 h-10'>{items.snippet.title}</button>
+        <button key={items.id} className='px-2 py-3 rounded-lg bg-slate-200 h-10'>{items.snippet.title}</button>
       ))}
     </div>
   </div>

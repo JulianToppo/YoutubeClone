@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { listofvideos } from "../../utils/youtubeConstants";
 import CardLayout from "./CardLayout";
+import { Link } from "react-router-dom";
 
 const VideoCards = () => {
   const [videoArray, setVideoArray] = useState([]);
@@ -19,7 +20,7 @@ const VideoCards = () => {
     <div className="flex flex-wrap justify-center">
       {videoArray.length &&
         videoArray.map((item) => {
-           return <CardLayout item={item}/>;
+           return <Link to={'/watch?v='+item.id}> <CardLayout key={item.id} item={item}/> </Link>;
         })}
     </div>
   );

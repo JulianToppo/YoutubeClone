@@ -6,7 +6,7 @@ const CardLayout = (props) => {
   return (
     <div className="flex flex-col p-4">
       <div className="p-2">
-        <img
+        <img alt="thumbnail"
           src={item.snippet?.thumbnails?.maxres?.url}
           className="h-48 rounded-lg"
         ></img>
