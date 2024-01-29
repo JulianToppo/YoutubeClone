@@ -3,13 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { toggleShowSidebar } from '../../utils/appSlice';
 import { youtubeSearchBarSuggestions } from '../../utils/youtubeConstants';
 import { addRecommendations } from '../../utils/youtubeSlice';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
   const [searchQuery,setSearchQuery]= useState('')
   const [showSuggestions,setShowSuggestions]= useState(false)
   const [recommendation,setRecommendations]=useState([])
-  const appSlice=useSelector((store)=>store.appSlice);
+  // const appSlice=useSelector((store)=>store.appSlice);
   const youtubeSlice=useSelector((store)=>store.youtube);
   const dispatch= useDispatch();
   
@@ -57,7 +58,7 @@ const Header = () => {
         <div className='flex'>
           
             <img className='h-10 mt-2' onClick={onClickSidebarSettingHandler} alt="sidebar-setting" src='https://cdn4.iconfinder.com/data/icons/action-states-vol-3-glyph/48/Sed-10-512.png'></img>
-            <img className='h-16 -mt-1' src='https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg' alt='youtubelogo'></img>
+           <Link to="/"> <img className='h-16 -mt-1' src='https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg' alt='youtubelogo'></img></Link>
         </div>
         <div className='p-3 w-10/12'>
             <input type='text' className='bg-slate-200 p-2 rounded-l-xl w-4/6 ml-32' onBlur={(e)=>setShowSuggestions(false)} onFocus={(e)=>setShowSuggestions(true)} onChange={(e)=>setSearchQuery(e.target.value)}></input>

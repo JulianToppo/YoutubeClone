@@ -18,7 +18,7 @@ const VideoCards = () => {
 
   return (
     <div className="flex flex-wrap justify-center">
-      {videoArray.length &&
+      {videoArray?.length &&
         videoArray.map((item) => {
            return <Link to={'/watch?v='+item.id}> <CardLayout key={item.id} item={item}/> </Link>;
         })}
